@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi import FastAPI, Depends, status
 from typing import Annotated
 
 # Database simulation
@@ -11,7 +11,6 @@ from fastapi_demo.models.models import User, Tags
 # Dependencies
 from fastapi_demo.dependencies.pagination import paginate
 from fastapi_demo.dependencies.resources import ValidUserDep, ValidAnimalDep
-
 
 app = FastAPI()
 
