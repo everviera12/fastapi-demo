@@ -9,6 +9,7 @@ def verify_api_key(x_api_key: Annotated[str | None, Header()] = None) -> str:
         )
     return x_api_key
 
+
 def require_admin(api_key: Annotated[str, Depends(verify_api_key)], x_role: Annotated[str | None, Header()] = "guest") -> str:
     print(api_key)
     if x_role != "admin":
